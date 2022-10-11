@@ -280,7 +280,7 @@ alert("En descuentos el teatro pierde aproximadamente: $"+Acumulador+ " En descu
 PrecioYdescuentos();*/
 
 
-// Ejercicio #*
+// Ejercicio #9
 // Funcion y Ingreso de datos
 /*function Comisiones(){
 // Acumulador
@@ -323,7 +323,7 @@ Comisiones();*/
 
 
 
-// Ejercicio #9
+// Ejercicio #10
 // Funcion
 /*function Votos(){
     // Variables y Contadores
@@ -371,7 +371,7 @@ Comisiones();*/
 
 // Ejercicio 11
 // Funcion
-function NumerosPrimosIntervalo(){
+/*function NumerosPrimosIntervalo(){
     // Ingreso de datos 
 Inicio = parseInt(prompt("Ingrese el numero inicial del rango"));
 Final = parseInt(prompt("Ingrese el numero final del rango"));
@@ -403,4 +403,34 @@ alert("El producto de los numeros es: "+Producto);
 alert("El promedio de los numeros es " + (Suma / NumDatos));
 }
 // Llamado al metodo
-NumerosPrimosIntervalo();
+NumerosPrimosIntervalo();*/
+
+
+// Ejercicio 12
+// Funcion
+function NumerosEnterosDigitos(){
+// Variables
+Par = 0;
+Impar = 0;
+Suma = 0;
+Producto = 1;
+// Ingreso de datos
+Numero = prompt("Ingrese un numero");
+Vec = Numero.split("");
+// Ciclo for
+for (let i = 0; i < Numero.length; i++) {
+    if(Vec[i] % 2 == 0){
+        Par = Par + 1;
+    }else{
+        Impar = Impar + 1;
+    }
+    parseInt(Suma = Suma + parseInt(Vec[i]));
+    parseInt(Producto = Producto * parseInt(Vec[i]));
+}
+Promedio = Suma / Numero.length;
+// Mensajes de respuesta
+alert("El numero de digitos es de: "+Numero.length);
+alert("Numeros pares: "+Par+" y Numeros Impares: "+Impar);
+alert("Sumatoria:  "+Suma+" Producto "+Producto+" Promedio: "+Promedio);
+}
+NumerosEnterosDigitos(); 
