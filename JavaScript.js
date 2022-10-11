@@ -282,7 +282,7 @@ PrecioYdescuentos();*/
 
 // Ejercicio #*
 // Funcion y Ingreso de datos
-function Comisiones(){
+/*function Comisiones(){
 // Acumulador
 Acumulador = 0;
 // Ciclo For y condicionales
@@ -319,10 +319,53 @@ for (let i = 1; i <= 100;i++) {
 alert("El total de ventas de la empresa fue: $"+Acumulador+" Millones");
 }
 // Llamado a la funcion
-Comisiones();
+Comisiones();*/
 
 
 
-
+// Ejercicio #9
+// Funcion
+function Votos(){
+    // Variables y Contadores
+    NumVotos=1;
+    Candidato1=0;
+    Candidato2=0;
+    Candidato3=0;
+    // Ciclo for y condicionales
+    while(NumVotos==1){
+    PersonaVotos = prompt("Ingrese por quien voto (Candidato1 - Candidato2 - Candidato3)");
+    
+        if(PersonaVotos == "Candidato1"){
+        Candidato1 = Candidato1 + 1;
+        }else if(PersonaVotos == "Candidato2"){
+        Candidato2 = Candidato2 + 1;
+        }else if(PersonaVotos == "Candidato3"){
+            Candidato3 = Candidato3 + 1;
+        }
+        NumVotos = parseInt(prompt("Ingrese 1 si desea ingresar otro voto o Ingrese 0 si ya no hay mas votantes"));     
+    }
+       // Condicionales
+       if((Candidato1 > Candidato2) & (Candidato1 > Candidato3)){
+        alert("Gano el candidato 1 con un total de: "+Candidato1);
+       }else if((Candidato2 > Candidato3) & (Candidato2 > Candidato1)){
+        alert("Gano el candidato 2 con un total de: "+Candidato2);
+       }else if((Candidato3 > Candidato2) & (Candidato3 > Candidato1)){
+        alert("Gano el candidato 3 con un total de: "+Candidato3);
+       }
+       // Conicionales
+       if((Candidato1 == Candidato2)){
+        alert("Existio un empate entre el candidato 1 y el 2 ambos con "+Candidato1+ " Votos");
+       }else if(Candidato2 == Candidato3){
+        alert("Existio un empate entre el candidato 2 y el 3 ambos con "+Candidato2+ " Votos");
+       }else if(Candidato1 == Candidato3){
+        alert("Existio un empate entre el candidato 1 y el 3 ambos con "+Candidato3+ " Votos");
+       }
+       // Mensaje de respuesta
+       alert("La cantidad total de votos fue de: "+(Candidato1+Candidato2+Candidato3));
+    
+    }
+    // Llamado a la funcion
+    Votos();
+    
 
 
